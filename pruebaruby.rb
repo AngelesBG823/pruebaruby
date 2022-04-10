@@ -5,10 +5,9 @@ require "json"
 #Quiero ocupar el punto que tenía en esta prueba porfa
 # 1. Crear el método request que reciba una url y el api_key y devuelva el hash con los resultados.
 # Concatenar la API Key en la siguiente url https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY
-
-def request(url, api_key)
 url = URI("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY")
-
+api_key = 
+def request(url, api_key)
 https = Net::HTTP.new(url.host, url.port)
 https.use_ssl = true
 
