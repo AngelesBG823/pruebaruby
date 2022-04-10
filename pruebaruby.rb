@@ -24,16 +24,6 @@ body = request(url)
 # los datos y construya una página web. Se evaluará la página creada y tiene que tener
 # este formato:
 
-def buid_web_page(data)
-    imagen = data['photos'].map{|x| x['img_src']}
-    doc_html = "<html>\n<head>\n</head>\n<body>\n\t<ul>\n"
-    imagen.each do |photo|
-        doc_html += "\t\t<li>\n\t\t\t<img src='#{photo}'>\n\t\t</li>\n"
-        end
-    doc_html += "\t</ul>\n</body>\n</html>"
-    File.write('photos.html', doc_html)
-end
-buid_web_page(body)
 
  
 # Pregunta bonus: Crear un método photos_count que reciba el hash de respuesta y
